@@ -16,7 +16,7 @@ Now let's see how to put it into action:
 
 ```javascript
 import React, { useState, useCallback } from 'react';
-import { Editor as EditorType, Value } from 'slate';
+import { Value } from 'slate';
 import { Editor } from 'slate-react';
 import { EditorSchema, EditorToolbar, Bold } from 'react-slate-elements';
 
@@ -25,7 +25,7 @@ const plugins = [
 ]
 
 const App = () => {
-  const [value, setValue] = useState(Value.fromJSON(initialValue));
+  const [value, setValue] = useState(Value.fromJS(initialValue));
   const [editor, setEditorRef] = useState(null);
 
   const onChangeValue = ({ value }) => setValue(value);
@@ -41,7 +41,7 @@ const App = () => {
   }
 
   return (
-    <>
+    <div style={{ margin: 20 }}>
       <EditorToolbar editor={editor}>
         <Bold.Button />
       </EditorToolbar>
@@ -54,9 +54,26 @@ const App = () => {
         renderMark={renderMark}
         plugins={plugins}
       />
-    </>
+    </div>
   );
 }
+
+const initialValue = {
+  document: {
+    nodes: [
+      {
+        object: 'block',
+        type: 'paragraph',
+        nodes: [
+          {
+            object: 'text',
+            text: 'A line of text in a paragraph.',
+          },
+        ],
+      },
+    ],
+  },
+};
 
 export default App;
 ```
