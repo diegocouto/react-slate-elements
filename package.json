@@ -1,16 +1,16 @@
 {
   "name": "react-slate-elements",
-  "version": "0.0.1",
+  "version": "0.0.15",
   "description": "A collection of blocks and marks to use with Slate.",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
-  "author": "Diego Couto",
+  "author": "Diego Couto<diego@couto.dev>",
   "license": "MIT",
   "scripts": {
     "build": "webpack --mode production",
     "deploy": "gh-pages -d examples/dist",
     "lint": "eslint src",
-    "prepublishOnly": "yarn build",
+    "prepublishOnly": "yarn transpile",
     "publishDemo": "yarn run build && yarn run deploy",
     "start": "webpack-dev-server --mode development --open",
     "transpile": "rm -rf dist; babel src -d dist --copy-files"
