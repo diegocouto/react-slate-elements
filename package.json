@@ -11,7 +11,7 @@
     "deploy": "gh-pages -d examples/dist",
     "lint": "eslint src",
     "prepublishOnly": "yarn build",
-    "publishDemo": "npm run build && npm run deploy",
+    "publishDemo": "yarn run build && yarn run deploy",
     "start": "webpack-dev-server --mode development --open",
     "transpile": "rm -rf dist; babel src -d dist --copy-files"
   },
