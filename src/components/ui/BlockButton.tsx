@@ -7,7 +7,7 @@ import EditorHandler from '../../helpers/EditorHandler';
 export interface BlockButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   editor?: Editor,
   isActive?: boolean,
-  onToggleBlock?: (event: React.MouseEvent, type: string) => void,
+  onToggleBlock?: (event: React.MouseEvent | React.TouchEvent, type: string) => void,
 }
 
 interface InternalBlockButtonProps extends BlockButtonProps {
@@ -19,7 +19,7 @@ const BlockButton: React.FunctionComponent<InternalBlockButtonProps> = ({
 }) => {
   const isActive = props.isActive || (editor && EditorHandler.hasBlock(editor.value, blockType));
 
-  const onPress = (event: React.MouseEvent) => {
+  const onPress = (event: React.MouseEvent | React.TouchEvent) => {
     if (onToggleBlock && blockType) {
       onToggleBlock(event, blockType);
     }
@@ -29,6 +29,7 @@ const BlockButton: React.FunctionComponent<InternalBlockButtonProps> = ({
     <ToolbarButton
       aria-pressed={isActive}
       onMouseDown={onPress}
+      onTouchStart={onPress}
       title={blockType}
       className={props.className}
       children={props.children}
