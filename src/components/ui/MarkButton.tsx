@@ -5,7 +5,7 @@ import ToolbarButton from './ToolbarButton';
 
 export interface MarkButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   editor?: Editor,
-  onToggleMark?: (event: React.MouseEvent | React.TouchEvent, type: string) => void,
+  onToggleMark?: (event: React.MouseEvent, type: string) => void,
 }
 
 interface InternalMarkButtonProps extends MarkButtonProps {
@@ -20,7 +20,7 @@ const MarkButton: React.FunctionComponent<InternalMarkButtonProps> = ({
     editor.value.activeMarks &&
     editor.value.activeMarks.some(mark => (!!mark && mark.type === markType));
 
-  const onPress = (event: React.MouseEvent | React.TouchEvent) => {
+  const onPress = (event: React.MouseEvent) => {
     if (onToggleMark && markType) {
       onToggleMark(event, markType);
     }
@@ -30,7 +30,6 @@ const MarkButton: React.FunctionComponent<InternalMarkButtonProps> = ({
     <ToolbarButton
       aria-pressed={isActive}
       onMouseDown={onPress}
-      onTouchStart={onPress}
       title={markType}
       className={props.className}
       children={props.children}
