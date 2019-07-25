@@ -4,7 +4,7 @@
 
 ![demo](https://user-images.githubusercontent.com/1069623/61877723-4a1c4580-aef8-11e9-9fa2-a1e095de4470.png)
 
-**[View demo](https://user-images.githubusercontent.com/1069623/61877723-4a1c4580-aef8-11e9-9fa2-a1e095de4470.png)** 👈
+**[View demo](https://diegocouto.github.com/react-slate-elements)** 👈
 
 ## Getting started
 
