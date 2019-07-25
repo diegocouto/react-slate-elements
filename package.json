@@ -1,6 +1,6 @@
 {
   "name": "react-slate-elements",
-  "version": "0.0.17",
+  "version": "0.0.2",
   "description": "A collection of blocks and marks to use with Slate.",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
@@ -17,6 +17,9 @@
     "slate",
     "slate-react"
   ],
+  "files": [
+    "/dist"
+  ],
   "scripts": {
     "build": "webpack --mode production",
     "deploy": "gh-pages -d examples/dist",
@@ -28,10 +31,10 @@
     "tsc": "tsc"
   },
   "peerDependencies": {
-    "react": "^16.8.0",
-    "react-dom": "^16.8.0",
-    "slate": "^0.47.0",
-    "slate-react": "^0.22.0"
+    "react": "16.8.x",
+    "slate": "0.47.x",
+    "slate-react": "0.22.x",
+    "styled-components": "4.x"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.5",
