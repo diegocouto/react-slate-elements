@@ -19,11 +19,6 @@ const Button = styled.button`
   margin: 0 2.5px;
   transition: all .2s ease-out;
 
-  &:hover, &:focus {
-    background: ${Colors.grayLight};
-    outline: none;
-  }
-
   &[aria-pressed="true"] {
     background: ${Colors.primary};
     color: #FFF;
@@ -36,6 +31,13 @@ const Button = styled.button`
   svg {
     width: 18px;
     height: 18px;
+  }
+
+  @media only screen and (min-width: 992px) { 
+    &:hover, &:focus {
+      background: ${Colors.grayLight};
+      outline: none;
+    }  
   }
 `;
 
