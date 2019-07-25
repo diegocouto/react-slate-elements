@@ -1,11 +1,22 @@
 {
   "name": "react-slate-elements",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "description": "A collection of blocks and marks to use with Slate.",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "author": "Diego Couto<diego@couto.dev>",
   "license": "MIT",
+  "homepage": "https://diegocouto.github.com/react-slate-elements",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/diegocouto/react-slate-elements"
+  },
+  "keywords": [
+    "react",
+    "reactjs",
+    "slate",
+    "slate-react"
+  ],
   "scripts": {
     "build": "webpack --mode production",
     "deploy": "gh-pages -d examples/dist",
@@ -13,7 +24,8 @@
     "prepublishOnly": "yarn transpile",
     "publishDemo": "yarn run build && yarn run deploy",
     "start": "webpack-dev-server --mode development --open",
-    "transpile": "rm -rf dist; babel src -d dist --copy-files"
+    "transpile": "rm -rf dist; babel src -d dist --extensions '.ts,.tsx'",
+    "tsc": "tsc"
   },
   "peerDependencies": {
     "react": "^16.8.0",
