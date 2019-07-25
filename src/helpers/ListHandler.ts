@@ -2,6 +2,7 @@ import { Editor, } from 'slate-react';
 
 import { TYPE as LIST_ITEM_TYPE } from '../components/blocks/list-item';
 import EditorHandler from './EditorHandler';
+import { Node, Block } from 'slate';
 
 const isActive = (editor: Editor | undefined, type: string) => {
   if (!editor || editor.value.blocks.size <= 0) { return false; }
@@ -9,7 +10,7 @@ const isActive = (editor: Editor | undefined, type: string) => {
   const { value } = editor;
   const parent = value.document.getParent(value.blocks.first().key);
 
-  return EditorHandler.hasBlock(value, LIST_ITEM_TYPE) && !!parent && parent.type === type;
+  return EditorHandler.hasBlock(value, LIST_ITEM_TYPE) && !!parent && (<Block>parent).type === type;
 }
 
 const onToggleButton = (editor: Editor | undefined, type: string) => {
@@ -21,7 +22,7 @@ const onToggleButton = (editor: Editor | undefined, type: string) => {
     const { value } = editor;
     const isSameBlockType = value.blocks.some(block => {
       if (!block) return false;
-      return !!value.document.getClosest(block.key, parent => parent.type === type)
+      return !!value.document.getClosest(block.key, parent => (<Block>parent).type === type)
     });
 
     if (isSameBlockType) {
