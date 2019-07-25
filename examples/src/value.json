@@ -1,0 +1,115 @@
+{
+  "document": {
+    "nodes": [
+      {
+        "object": "block",
+        "type": "paragraph",
+        "nodes": [
+          {
+            "object": "text",
+            "marks": [
+              "code"
+            ],
+            "text": "react-slate-elements"
+          },
+          {
+            "object": "text",
+            "text": " is a set of components to build your rich editors when using "
+          },
+          {
+            "object": "text",
+            "marks": [
+              "bold"
+            ],
+            "text": "Slate"
+          },
+          {
+            "object": "text",
+            "text": " & "
+          },
+          {
+            "object": "text",
+            "marks": [
+              "bold"
+            ],
+            "text": "React"
+          },
+          {
+            "object": "text",
+            "text": "."
+          }
+        ]
+      },
+      {
+        "object": "block",
+        "type": "paragraph",
+        "nodes": [
+          {
+            "object": "text",
+            "text": "Slate is a powerful and flexible framework to create your own editors. Because of its flexibility, it can also be a bit overwhelming at first and that's when this package can help you out."
+          }
+        ]
+      },
+      {
+        "object": "block",
+        "type": "paragraph",
+        "nodes": [
+          {
+            "object": "text",
+            "text": "Wanna see some nice tricks? So try:"
+          }
+        ]
+      },
+      {
+        "object": "block",
+        "type": "bullet-list",
+        "nodes": [
+          {
+            "object": "block",
+            "type": "list-item",
+            "nodes": [
+              {
+                "object": "text",
+                "text": "Typing on a new paragraph "
+              },
+              {
+                "object": "text",
+                "marks": [
+                  "code"
+                ],
+                "text": "> + Space"
+              }
+            ]
+          },
+          {
+            "object": "block",
+            "type": "list-item",
+            "nodes": [
+              {
+                "object": "text",
+                "text": "Selecting some text and press "
+              },
+              {
+                "object": "text",
+                "marks": [
+                  "code"
+                ],
+                "text": "Cmd + b"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "object": "block",
+        "type": "paragraph",
+        "nodes": [
+          {
+            "object": "text",
+            "text": ""
+          }
+        ]
+      }
+    ]
+  }
+}
