@@ -10,7 +10,8 @@ import {
   EditorSchema,
   EditorToolbar, Separator,
   Bold, Code, Italic, Underline, Strikethrough,
-  Blockquote, BulletList, ListItem, OrderedList, Paragraph
+  Blockquote, BulletList, ListItem, OrderedList, Paragraph,
+  SymbolsReplacer
 } from '../../src/index';
 
 const plugins = [
@@ -23,7 +24,8 @@ const plugins = [
   Blockquote.Plugin,
   BulletList.Plugin,
   OrderedList.Plugin,
-  ListItem.Plugin
+  ListItem.Plugin,
+  SymbolsReplacer.Plugin
 ]
 
 const App = () => {

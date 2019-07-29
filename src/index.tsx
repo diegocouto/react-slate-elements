@@ -16,6 +16,9 @@ import ListItem from './components/blocks/list-item';
 import OrderedList from './components/blocks/ordered-list';
 import Paragraph from './components/blocks/paragraph';
 
+// Plugins
+import SymbolsReplacer from './plugins/SymbolsReplacer';
+
 // Helpers
 import EditorSchema from './helpers/EditorSchema'
 
@@ -23,5 +26,6 @@ export {
   EditorSchema,
   EditorToolbar, Separator,
   Bold, Code, Italic, Underline, Strikethrough,
-  Blockquote, BulletList, ListItem, OrderedList, Paragraph
+  Blockquote, BulletList, ListItem, OrderedList, Paragraph,
+  SymbolsReplacer
 };
