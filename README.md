@@ -114,6 +114,10 @@ For a complete example, you can [check the code used on the demonstration](https
 
 - [x] [EditorSchema](https://github.com/diegocouto/react-slate-elements/blob/master/src/helpers/EditorSchema.ts)
 
+**Plugins**
+
+- [x] [SymbolsReplacer](https://github.com/diegocouto/react-slate-elements/blob/master/src/plugins/SymbolsReplacer.ts)
+
 ## Big thanks 👏
 
 All icons used here are part of the [MaterialDesign project](https://github.com/Templarian/MaterialDesign).
