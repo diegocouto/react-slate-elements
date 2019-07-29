@@ -9,7 +9,7 @@ import initialValue from './value.json';
 import {
   EditorSchema,
   EditorToolbar, Separator,
-  Bold, Code, Italic, Underline,
+  Bold, Code, Italic, Underline, Strikethrough,
   Blockquote, BulletList, ListItem, OrderedList, Paragraph
 } from '../../src/index';
 
@@ -18,6 +18,7 @@ const plugins = [
   Bold.Plugin,
   Italic.Plugin,
   Underline.Plugin,
+  Strikethrough.Plugin,
   Code.Plugin,
   Blockquote.Plugin,
   BulletList.Plugin,
@@ -57,6 +58,8 @@ const App = () => {
         return Underline.Mark(props);
       case Code.TYPE:
         return Code.Mark(props);
+      case Strikethrough.TYPE:
+        return Strikethrough.Mark(props);
       default:
         return next();
     }
@@ -72,6 +75,7 @@ const App = () => {
           <Italic.Button />
           <Underline.Button />
           <Code.Button />
+          <Strikethrough.Button />
 
           <Separator />
 
